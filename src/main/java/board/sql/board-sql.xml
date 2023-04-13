@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>member-sql.xml</comment>
+
+	<entry key="insert">
+		INSERT INTO BOARD(BOARDNO, TITLE, CONTENT, WRITER, REGDATE, CNT)
+		VALUES (SEQ_BOARD.NEXTVAL, ?, ?, ?, SYSDATE, 0)
+	</entry>
+	 
+	<entry key="selectAll">
+		SELECT BOARDNO, TITLE, WRITER, REGDATE, CNT
+		FROM BOARD ORDER BY BOARDNO DESC
+	</entry>
+	
+</properties>
